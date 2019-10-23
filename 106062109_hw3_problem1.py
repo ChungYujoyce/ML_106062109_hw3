@@ -89,3 +89,30 @@ print(weights)
 print(new_int_data)
 print("----------Leanring rate: 0.2----------")
 print("Example-presentations:%d "% example_presentations)
+
+learning_rate = 0.4
+n_epoch = 20
+weights ,example_presentations = train_weights(new_int_data, learning_rate, n_epoch)
+example_pres.append(example_presentations)
+print(weights)
+print(new_int_data)
+print("----------Leanring rate: 0.4----------")
+print("Example-presentations:%d "% example_presentations)
+
+learning_rate = 0.6
+n_epoch = 20
+weights ,example_presentations = train_weights(new_int_data, learning_rate, n_epoch)
+example_pres.append(example_presentations)
+print(weights)
+print("----------Leanring rate: 0.6----------")
+print("Example-presentations:%d "% example_presentations)
+
+learning_rate = 0.8
+n_epoch = 20
+weights ,example_presentations = train_weights(new_int_data, learning_rate, n_epoch)
+example_pres.append(example_presentations)
+print(weights)
+print("----------Leanring rate: 0.8----------")
+print("Example-presentations:%d "% example_presentations)
+
+draw_func([0.2, 0.4, 0.6, 0.8], example_pres)

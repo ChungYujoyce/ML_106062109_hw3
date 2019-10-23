@@ -83,7 +83,7 @@ def train_weights(train, learning_rate, n_epoch):
         #print('>epoch=%d, learning_rate=%.3f, error=%.3f' % (epoch, learning_rate, sum_error))
         #print(weights[0], weights[1],weights[2] ,weights[3],weights[4], weights[5])
 
-    return weights, zero_error_epoch * len(train) #, example_presentations
+    return weights, zero_error_epoch * (len(train[-1])-1) #, example_presentations
 
 filename = 'hw3_dataset.txt'
 f = open(filename, "r")
@@ -102,3 +102,57 @@ weights ,example_presentations = train_weights(new_int_data, learning_rate, n_ep
 example_pres.append(example_presentations)
 print("----------Leanring rate: 0.2 , N = 1----------")
 print("Example-presentations:%d "% example_presentations)
+
+new_data = load_dataset(dataset) # need to reload it to prevent the data becoming larger
+learning_rate = 0.2
+n_epoch = 20
+N = 5
+add_attributes(new_data, N)
+process_label(new_data)
+new_int_data = change_type(new_data)
+
+weights ,example_presentations = train_weights(new_int_data, learning_rate, n_epoch)
+example_pres.append(example_presentations)
+print("----------Leanring rate: 0.2 , N = 5----------")
+print("Example-presentations:%d "% example_presentations)
+
+new_data = load_dataset(dataset) # need to reload it to prevent the data becoming larger
+learning_rate = 0.2
+n_epoch = 20
+N = 10
+add_attributes(new_data, N)
+process_label(new_data)
+new_int_data = change_type(new_data)
+
+weights ,example_presentations = train_weights(new_int_data, learning_rate, n_epoch)
+example_pres.append(example_presentations)
+print("----------Leanring rate: 0.2 , N = 10----------")
+print("Example-presentations:%d "% example_presentations)
+
+new_data = load_dataset(dataset) # need to reload it to prevent the data becoming larger
+learning_rate = 0.2
+n_epoch = 20
+N = 15
+add_attributes(new_data, N)
+process_label(new_data)
+new_int_data = change_type(new_data)
+
+weights ,example_presentations = train_weights(new_int_data, learning_rate, n_epoch)
+example_pres.append(example_presentations)
+print("----------Leanring rate: 0.2 , N = 15----------")
+print("Example-presentations:%d "% example_presentations)
+
+new_data = load_dataset(dataset) # need to reload it to prevent the data becoming larger
+learning_rate = 0.2
+n_epoch = 20
+N = 20
+add_attributes(new_data, N)
+process_label(new_data)
+new_int_data = change_type(new_data)
+
+weights ,example_presentations = train_weights(new_int_data, learning_rate, n_epoch)
+example_pres.append(example_presentations)
+print("----------Leanring rate: 0.2 , N = 20----------")
+print("Example-presentations:%d "% example_presentations)
+
+draw_func([1, 5, 10, 15, 20], example_pres)
