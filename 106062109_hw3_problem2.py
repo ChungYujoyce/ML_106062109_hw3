@@ -83,7 +83,7 @@ def train_weights(train, learning_rate, n_epoch):
         #print('>epoch=%d, learning_rate=%.3f, error=%.3f' % (epoch, learning_rate, sum_error))
         #print(weights[0], weights[1],weights[2] ,weights[3],weights[4], weights[5])
 
-    return weights, zero_error_epoch * (len(train[-1])-1) #, example_presentations
+    return weights, zero_error_epoch * len(train) #, example_presentations
 
 filename = 'hw3_dataset.txt'
 f = open(filename, "r")
