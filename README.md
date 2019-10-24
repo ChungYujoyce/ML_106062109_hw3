@@ -50,6 +50,8 @@ Problem 1:
 
 ###### Result
 ![](https://i.imgur.com/WJ98LUv.jpg)
+![](https://i.imgur.com/jy4cgko.jpg)
+
 
 ##### Obervation
 
